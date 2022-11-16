@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <script>
+      function mostrarComprendido(inicio, fin) {
+        for (let f = inicio; f <= fin; f++) {
+          document.write(f + " ");
+        }
+      }
+
+      let valor = parseInt(prompt("Ingrese el valor de inferior"));
+      let valor2 = parseInt(prompt("Ingrese el valor de superior"));
+
+      mostrarComprendido(valor, valor2);
+    </script>
+  </body>
+</html>

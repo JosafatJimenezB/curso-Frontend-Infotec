@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicionales anidados</title>
+  </head>
+  <body>
+    <script>
+      let cal1, cal2, cal3;
+
+      cal1 = parseInt(prompt("Introduce la primera calificación"));
+      cal2 = parseInt(prompt("Introduce la segunda calificación"));
+      cal3 = parseInt(prompt("Introduce la tercera calificación"));
+
+      let prom = cal1 + cal2 + cal3 / 3;
+
+      if (prom >= 6) {
+        document.write("Aprobado");
+      } else {
+        if (prom >= 4) {
+          document.write("Recuperación");
+        } else {
+          document.write("Suspenso");
+        }
+      }
+    </script>
+  </body>
+</html>

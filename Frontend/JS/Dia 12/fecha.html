@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fecha</title>
+  </head>
+  <body>
+    <script>
+      function formatearFecha(dia, mes, anio) {
+        let s = "Hola es " + dia + " de ";
+
+        switch (mes) {
+          case 1:
+            s = s + "Enero";
+            break;
+
+          case 2:
+            s = s + "Febrero";
+            break;
+
+          case 3:
+            s = s + "Marzo";
+            break;
+
+          case 4:
+            s = s + "Abril";
+            break;
+
+          case 5:
+            s = s + "Mayo";
+            break;
+
+          case 6:
+            s = s + "Junio";
+            break;
+
+          case 7:
+            s = s + "Julio";
+            break;
+
+          case 8:
+            s = s + "Agosto";
+            break;
+
+          case 9:
+            s = s + "Septiembre";
+            break;
+
+          case 10:
+            s = s + "Octubre";
+            break;
+
+          case 11:
+            s = s + "Noviembre";
+            break;
+
+          case 12:
+            s = s + "Diciembre";
+            break;
+
+          default:
+            break;
+        }
+
+        s = s + " del " + anio;
+        return s;
+      }
+
+      let fec = formatearFecha(4, 7, 2022);
+      document.write(fec);
+    </script>
+  </body>
+</html>

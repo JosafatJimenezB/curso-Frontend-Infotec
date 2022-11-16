@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lista</title>
+  </head>
+  <body>
+    <div id="lista1"></div>
+
+    <script>
+      function iniciar() {
+        generarLista("lista1", "uno", "dos", "tres", "cuatro", "cinco", "seis");
+      }
+
+      function generarLista() {
+        let s = "<ol>";
+
+        for (let f = 1; f < arguments.length; f++) {
+          s += "<li>" + arguments[f] + "</li>";
+        }
+
+        s += "</ol>";
+        let elemento1 = document.getElementById(arguments[0]);
+        elemento1.innerHTML = s;
+      }
+
+      iniciar();
+    </script>
+  </body>
+</html>

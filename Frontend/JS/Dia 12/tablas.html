@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas de multiplicar</title>
+  </head>
+  <body>
+    <script>
+      /// Creacion de una funcion para el calculo de las tablas de multiplicar
+      function calcularTabla() {
+        /// Creacion
+        let valor = parseInt(
+          prompt("Ingrese que tabla de multiplicar quiere obtener")
+        );
+
+        for (let f = 1; f <= 10; f++) {
+          let tabla = valor * f;
+          document.write(valor + " x " + f + " = " + tabla + "<br>");
+        }
+      }
+
+      /// Llamando a la funcion
+      calcularTabla();
+    </script>
+  </body>
+</html>

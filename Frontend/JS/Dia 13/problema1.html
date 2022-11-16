@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema 1</title>
+  </head>
+  <body>
+    <div id="numMayor"></div>
+
+    <script>
+      function mayor() {
+        let mayor = arguments[0];
+
+        for (let f = 0; f < arguments.length; f++) {
+          if (arguments[f] > mayor) {
+            mayor = arguments[f];
+          }
+        }
+
+        return mayor;
+      }
+
+      s = mayor(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+      let mayor = document.getElementById("numMayor");
+
+      mayor.innerHTML = mayor;
+    </script>
+  </body>
+</html>

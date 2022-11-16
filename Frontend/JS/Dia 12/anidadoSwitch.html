@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anidado</title>
+  </head>
+  <body>
+    <script>
+      function convertirLetras() {
+        switch (x) {
+          case 1:
+            return "Uno";
+
+          case 2:
+            return "Dos";
+
+          case 3:
+            return "Tres";
+
+          case 4:
+            return "Cuatro";
+
+          case 5:
+            return "Cinco";
+
+          default:
+            return "No es un número del 1 al 5";
+        }
+      }
+
+      let valor = parseInt(prompt("Ingrese un valor entre 1 y 5"));
+
+      let r = convertirLetras(valor);
+      document.write(r);
+    </script>
+  </body>
+</html>

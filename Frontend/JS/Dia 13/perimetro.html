@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular el perimetro</title>
+  </head>
+  <body>
+    <!-- Instrucciones para el usuario -->
+    <h1>Calcular perimetro</h1>
+    <p>Ingrese valor del lado</p>
+
+    <!-- Input para capturar el dato que ingrese el usuario -->
+    <input type="text" id="valor" />
+
+    <!-- Ejecucion de la funcion desde evento onClick -->
+    <button onclick="calcularPerimetro()">Calcular</button>
+
+    <!-- div para mostrar el resultado -->
+    <div id="resultado"></div>
+
+    <script>
+      // Creando una arrow function para calcular el perimetro
+      const calcularPerimetro = () => {
+        // Capturando el valor del input
+        let valor = document.getElementById("valor").value;
+
+        // Calculando el perimetro
+        let perimetro = valor * 4;
+
+        // Imprimiendo el resultado usando innerHTML
+        document.getElementById(
+          "resultado"
+        ).innerHTML = `El perimetro es: ${perimetro}`;
+      };
+    </script>
+  </body>
+</html>

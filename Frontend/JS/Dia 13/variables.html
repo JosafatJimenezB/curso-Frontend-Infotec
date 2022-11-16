@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      // Creando una funcion
+      function imprimir() {
+        // Todas las variables deben declararse si no se produce un error
+        "use strict";
+
+        // declarando variables
+        let local = 10;
+
+        // Imprimiendo variables con document.write
+        // document.write(x);
+
+        // Imprimiendo variables con inerHTML
+        document.body.innerHTML = `<h2>Esto es una variable local</h2>
+                                 <p>${local}</p>
+                                 <h2>Esto es una variable global</h2>
+                                 <p>${global}</p>`;
+      }
+
+      // Variable de tipo global
+      let global = 100;
+
+      /// Llamando a la funcion para ejecutarla
+      imprimir(global);
+    </script>
+  </body>
+</html>

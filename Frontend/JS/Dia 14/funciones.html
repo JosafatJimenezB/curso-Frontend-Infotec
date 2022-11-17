@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <script>
+      /*
+       *   Funcion para la creacion de una lista no ordenada
+       *   que recibe como parametro una vector y un tipo
+       *   que en este caso es de tipo <ul>
+       */
+      function generarLista(vec, tipo = "<ul>") {
+        // Variable para el tipo de lista
+        let lista = tipo;
+
+        // Ciclo para recorrer el vector y crear los elementos de la lista
+        for (let i = 0; i < vec.length; i++) lista += `<li>${vec[i]}</li>`;
+
+        // Condicional para verificar el tipo de lista
+        if (tipo == "<ul>") lista += "</ul>";
+        else lista += "</ol>";
+
+        // Retornamos la lista
+        return lista;
+      }
+
+      // Vector para la creacion de la lista
+      const opciones1 = [
+        "opcion 1",
+        "opcion 2",
+        "opcion 3",
+        "opcion 4",
+        "opcion 5",
+      ];
+
+      // Imprision de la lista pasando la opcion1
+      document.write(generarLista(opciones1));
+
+      // Vector para la creacion de la lista
+      const opciones2 = ["opcion a", "opcion b", "opcion b", "opcion d"];
+
+      // Imprision de la lista pasando la opcion2
+      document.write(generarLista(opciones2, "<ol>"));
+    </script>
+  </body>
+</html>

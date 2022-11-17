@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas de multiplicar</title>
+  </head>
+  <body>
+    <script>
+      /*
+       *   Funcion para la generacion de tablas de multiplicar
+       *   que recibe como parametro dos variables inicializadas
+       *   para el caso de que llamen a la funcion sin parametros
+       */
+      function tablaMultiplicar(tabla = 2, cantidad = 10) {
+        // Imprime el titulo en el documento
+        document.write(`<h1>Tabla del ${tabla}</h1>`);
+
+        // Ciclo para la creacion de las tablas
+        for (let i = 1; i <= cantidad; i++) {
+          // Imprime los resultados obtenidos de la multplicacion
+          document.write(`${tabla} x ${i} = ${tabla * i} <br>`);
+        }
+      }
+
+      // Llamado a la funcion con distintos parametros
+      tablaMultiplicar();
+      tablaMultiplicar(3);
+      tablaMultiplicar(3, 20);
+    </script>
+  </body>
+</html>

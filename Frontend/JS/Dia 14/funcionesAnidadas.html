@@ -10,14 +10,19 @@
     <div id="div1"></div>
 
     <script>
+      // Creacion de la funcion exterior
       function generarListaOrdenada(vec) {
+        // Creacion de las funciones anidadas
         function comienzo() {
+          // Crea el inicio de la etiqueta de lista ordenada
           return "<ol>";
         }
         function final() {
+          // Crea el final de la etiqueta de lista ordenada
           return "</ol>";
         }
 
+        // Ciclo para iterar los parametros y escribirlos en la lista ordenada
         let s = "";
         comienzo();
         for (let i = 0; i < vec.length; i++) {
@@ -27,11 +32,14 @@
         return s;
       }
 
+      // Dando los valores a la funcion
       let opciones = ["opcion 1", "opcion 2", "opcion 3"];
+
+      // Capturando el elemento del DOM
       const div = document.getElementById("div1");
 
+      // Escribiendo en el DOM el resultado de la funcion en nuestro div
       div.innerHTML = generarListaOrdenada(opciones);
-      //   div.innerHTML = opciones;
     </script>
   </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones anidadas</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+
+    <script>
+      function generarListaOrdenada(vec) {
+        function comienzo() {
+          return "<ol>";
+        }
+        function final() {
+          return "</ol>";
+        }
+
+        let s = "";
+        comienzo();
+        for (let i = 0; i < vec.length; i++) {
+          s += "<li>" + vec[i] + "</li>";
+        }
+        final();
+        return s;
+      }
+
+      let opciones = ["opcion 1", "opcion 2", "opcion 3"];
+      const div = document.getElementById("div1");
+
+      div.innerHTML = generarListaOrdenada(opciones);
+      //   div.innerHTML = opciones;
+    </script>
+  </body>
+</html>

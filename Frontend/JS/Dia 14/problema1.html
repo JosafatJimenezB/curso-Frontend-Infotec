@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>problema 1</title>
+  </head>
+  <body>
+    <script>
+      // Creacion de la funcion exterior
+      function f1(x) {
+        // Creacion de la funcion interior
+        function f2(y) {
+          document.write("Parametro de la funcion exterior" + x + "<br>");
+          document.write("Parametro de la funcion interior" + y + "<br>");
+          document.write("Variable local de la funcion exterior" + z + "<br>");
+        }
+        // Creacion de la variable local de la funcion exterior
+        let z = 1;
+        f2(2);
+      }
+
+      f1(2);
+    </script>
+  </body>
+</html>

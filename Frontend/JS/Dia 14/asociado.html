@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- No se recomienda el css en este archivo
+        pero con fines practicos lo agregare aqui -->
+
+    <style>
+      .boton {
+        width: 50px;
+        height: 50px;
+      }
+
+      #resultado {
+        font-size: 40px;
+      }
+    </style>
+    <title>Asociacion de funciones</title>
+  </head>
+  <body>
+    <!-- Creando los botones -->
+    <input type="button" id="boton0" name="boton0" value="0" class="boton" />
+    <input type="button" id="boton1" name="boton1" value="1" class="boton" />
+    <input type="button" id="boton2" name="boton2" value="2" class="boton" />
+    <input type="button" id="boton3" name="boton3" value="3" class="boton" />
+    <input type="button" id="boton4" name="boton4" value="4" class="boton" />
+    <input type="button" id="boton5" name="boton5" value="5" class="boton" />
+    <input type="button" id="boton6" name="boton6" value="6" class="boton" />
+    <input type="button" id="boton7" name="boton7" value="7" class="boton" />
+    <input type="button" id="boton8" name="boton8" value="8" class="boton" />
+    <input type="button" id="boton9" name="boton9" value="9" class="boton" />
+
+    <!-- Div para mostrar los resultados -->
+    <div id="resultado"></div>
+
+    <script>
+      // Asociacion de funciones por eventos
+
+      // CIclo para la iteracion de los botones
+      for (let i = 0; i <= 9; i++) {
+        // Capturando el boton cuando se de click y este ejecuta un funcion
+        document.getElementById("boton" + i).addEventListener("click", presion);
+      }
+
+      // Funcion que se ejecuta cuando se presiona un boton
+      function presion(evt) {
+        // Imprimiendo lo capturado del boton en nuestro div de resultados
+        document.getElementById("resultado").innerHTML += evt.target.value;
+      }
+    </script>
+  </body>
+</html>

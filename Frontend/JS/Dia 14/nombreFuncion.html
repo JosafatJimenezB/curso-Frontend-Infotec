@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de JavaScript</title>
+  </head>
+  <body>
+    <!-- Divs para mostrar los resultados de las operaciones -->
+    <h1>Resultados funciones declaradas</h1>
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+    <script>
+      //  Funcion que realiza la suma de dos numeros
+      function sumar(v1, v2) {
+        return v1 + v2;
+      }
+
+      //  Funcion que realiza la resta de dos numeros
+      function restar(v1, v2) {
+        return v1 - v2;
+      }
+
+      /*
+       * Funcion que recibe 3 parametros,
+       * dos numeros y una funcion para realizar la operacion
+       * que se indique por el usuario
+       */
+      function calcular(x, y, fu) {
+        // Se crea una variable que recibe una funcion
+        let result = fu(x, y);
+
+        // Se retorna el valor de la variable
+        return result;
+      }
+
+      // Creacion de variables que contienen la funcion principal
+      let s1 = calcular(2, 3, sumar);
+      let s2 = calcular(5, 3, restar);
+
+      // Captura de los divs del DOM para insertar los resultados
+      const result1 = document.getElementById("result1");
+      const result2 = document.getElementById("result2");
+
+      // Insercion de los resultados en los divs
+      result1.innerHTML = `<p>La suma de 2 + 3 es: ${s1}</p>`;
+      result2.innerHTML = `<p>La resta de 5 - 3 es: ${s2}</p>`;
+    </script>
+  </body>
+</html>

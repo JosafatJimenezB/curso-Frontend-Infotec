@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcion variable</title>
+  </head>
+  <body>
+    <!-- Container para escribir contenido desde JS -->
+    <div id="container"></div>
+
+    <script>
+      // Ejemplo de pasar una funcion como parametro a otra funcion
+
+      // Creacion de la funcion que recibe 2 parametros
+      let f1 = function (x, y) {
+        // Se crea una variable que realiza el proceso de suma
+        let s = x + y;
+
+        // Se retorna el valor de la variable
+        return s;
+      };
+
+      // Capturando el elemento del DOM para insertar contenido
+      const container = document.getElementById("container");
+
+      // Creando contenido en nuestro div
+      container.innerHTML = `<p>La suma de 2 + 3 es: ${f1(2, 3)}</p>`;
+
+      // Creando una funcion que recibe una funcion como parametro
+      let f2 = f1;
+
+      // Creando contenido en nuestro div
+      container.innerHTML += `<p>La suma de 5 + 7 es: ${f2(5, 7)}</p>`;
+    </script>
+  </body>
+</html>

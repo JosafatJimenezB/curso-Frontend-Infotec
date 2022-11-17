@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paso por funcion</title>
+  </head>
+  <body>
+    <!-- Divs para insercion de datos por medio de JS -->
+    <h1>Resultados</h1>
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+    <script>
+      // Creacion de una funcion que reciba 3 parametros y uno sea una funcion
+
+      function calcular(x, y, fu) {
+        /* Se crea una variable que realiza el proceso de suma
+         *  mediante el uso de un funcion que se pasa como parametro
+         *  a esta funcion
+         */
+        let result = fu(x, y);
+
+        // Se retorna el valor de la variable
+        return result;
+      }
+
+      // Creacion de la funcion que realiza el proceso de suma
+      let s1 = calcular(10, 5, function (v1, v2) {
+        // retorna el calculo de la suma
+        return v1 + v2;
+      });
+
+      // Creacion de la funcion que realiza el proceso de resta
+      let s2 = calcular(10, 5, function (v1, v2) {
+        // retorna el calculo de la resta
+        return v1 - v2;
+      });
+
+      // Captura de los divs del DOM para insertar los resultados
+      const result1 = document.getElementById("result1");
+      const result2 = document.getElementById("result2");
+
+      // Insercion de los resultados en los divs
+      result1.innerHTML = `<p>La suma de 10 + 5 es: ${s1}</p>`;
+      result2.innerHTML = `<p>La resta de 10 - 5 es: ${s2}</p>`;
+    </script>
+  </body>
+</html>

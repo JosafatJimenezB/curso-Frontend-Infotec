@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      const vec = [100, 22, 17, 50, 3];
+
+      // vec.sort((x,y) => {
+      //     if(x > y){
+      //         return 1;
+      //     }else{
+      //         return -1;
+      //     }
+      // })
+
+      //   vec.forEach((elemento) => {
+      //     document.write(elemento + " ");
+      //   });
+
+      //   document.write(vec.toString());
+
+      // Arrow function con un solo parámetro
+      /* const doble = (x) => x * 2;
+      document.write(doble(10));
+      document.write(doble(7)); */
+
+      // Arrow function con dos parametro y resulto con una sola expresion
+
+      /* const mayor = (x, y) => (x > y ? x : y);
+
+      document.write(mayor(7, 20)); */
+
+      vec.sort((x, y) => (x > y ? 1 : -1));
+      document.write(vec.toString());
+    </script>
+  </body>
+</html>

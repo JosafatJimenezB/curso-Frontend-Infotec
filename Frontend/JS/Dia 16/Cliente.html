@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos en JavaScript</title>
+  </head>
+  <body>
+    <script>
+      /// Metodos que se usaran para las operaciones
+      function Cliente(nombre, saldo) {
+        this.nombre = nombre;
+        this.saldo = saldo;
+        this.depositar = depositar;
+        this.extraer = extraer;
+      }
+
+      function depositar(dinero) {
+        this.saldo += dinero;
+      }
+
+      function extraer(dinero) {
+        this.saldo -= dinero;
+      }
+
+      // Instanciando objeto cliente y usando los metodos
+
+      let cliente1;
+      cliente1 = new Cliente("Juan", 1200);
+      document.write(
+        cliente1.nombre + " tiene un saldo de " + cliente1.saldo + "<br>"
+      );
+      cliente1.depositar(120);
+      document.write(
+        "Saldo despues de depositar $120 ---> " + cliente1.saldo + "<br>"
+      );
+      cliente1.extraer(1000);
+      document.write(
+        "Saldo despues de extraer $1000 ---> " + cliente1.saldo + "<br>"
+      );
+    </script>
+  </body>
+</html>

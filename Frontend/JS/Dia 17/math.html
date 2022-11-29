@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libreria math</title>
+  </head>
+  <body>
+    <script>
+      let selec = parseInt(prompt("Ingrese un numero del 1 al 10"));
+      let num = parseInt(Math.random() * 10) + 1;
+
+      if (num == selec) {
+        document.write("Gano el numero que se sorteó es: " + num);
+      } else {
+        document.write(
+          "Lo siento se sorteó el valor: " + num + " y usted eligió el " + selec
+        );
+      }
+    </script>
+  </body>
+</html>

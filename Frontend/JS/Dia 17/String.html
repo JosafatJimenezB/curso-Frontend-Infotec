@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * Cargar un string por teclado y luego llamar a los
+       * distintos métodos de la clase String y la propiedad length.
+       */
+
+      let nombre = prompt("Ingrese su nombre");
+
+      document.write("El nombre ingresado es: " + nombre + "<br>");
+      document.write(
+        "El nombre ingresado en mayúsculas es: " + nombre.toUpperCase() + "<br>"
+      );
+      document.write(
+        "El nombre ingresado en minúsculas es: " + nombre.toLowerCase() + "<br>"
+      );
+      document.write(
+        "El nombre ingresado tiene " + nombre.length + " caracteres" + "<br>"
+      );
+      document.write(
+        "El nombre ingresado tiene " +
+          nombre.trim().length +
+          " caracteres sin espacios" +
+          "<br>"
+      );
+    </script>
+  </body>
+</html>

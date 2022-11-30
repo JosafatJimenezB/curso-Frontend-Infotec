@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio menu con clases</title>
+  </head>
+  <body>
+    <div id="menu"></div>
+
+    <script>
+      class Menu {
+        constructor() {
+          this.enlaces = [];
+          this.descripcion = [];
+        }
+
+        insertar(enlace, descripcion) {
+          this.enlaces.push(enlace);
+          this.descripcion.push(descripcion);
+        }
+
+        mostrar(elemento) {
+          let cadena = "<div>";
+          for (let i = 0; i < this.enlaces.length; i++)
+            cadena +=
+              '[<a href="' +
+              this.enlaces[i] +
+              '">' +
+              this.descripcion[i] +
+              "</a>]";
+          cadena += "</div>";
+          document.getElementById(elemento).innerHTML = cadena;
+        }
+      }
+
+      const menu = new Menu();
+
+      menu.insertar("http://www.google.com", "Google");
+      menu.insertar("http://www.yahoo.com", "Yahoo");
+      menu.insertar("http://www.msn.com", "MSN");
+
+      menu.mostrar("menu");
+    </script>
+  </body>
+</html>

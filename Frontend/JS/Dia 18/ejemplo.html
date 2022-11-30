@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de JavaScript</title>
+  </head>
+  <body>
+    <div class="info">
+      <h1>Datos</h1>
+      <p>Personas con mayor edad:</p>
+    </div>
+
+    <script>
+      const info = document.querySelector(".info");
+
+      function Persona(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.imprimirNombre = function () {
+          info.innerHTML += `<p>Nombre: ${this.nombre}    Edad: ${this.edad}<p>`;
+        };
+      }
+
+      let vector = new Array(4);
+
+      vector[0] = new Persona("Juan", 20);
+      vector[1] = new Persona("Pedro", 30);
+      vector[2] = new Persona("Ana", 40);
+      vector[3] = new Persona("Luis", 50);
+
+      let posMayor = 0;
+
+      for (let i = 0; i < vector.length; i++) {
+        if (vector[i].edad > vector[posMayor].edad) {
+          posMayor = i;
+        }
+      }
+
+      for (let i = 0; i < vector.length; i++) {
+        if (vector[i].edad == vector[posMayor].edad) {
+          vector[i].imprimirNombre();
+        }
+      }
+    </script>
+  </body>
+</html>

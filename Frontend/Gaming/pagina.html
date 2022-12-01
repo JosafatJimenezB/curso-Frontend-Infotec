@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="display: grid; place-items: center">
+      <h1>Gaming</h1>
+      <h2>Práctica de HTML</h2>
+      <p>
+        Esta prueba consiste en intentar clonar esta página en el mejor tiempo
+        posible! Recuerda todos los conceptos y las etiquetas que hemos visto e
+        intenta ganar este reto
+      </p>
+      <h2>Tablas</h2>
+
+      <table border="1">
+        <tr>
+          <th>Soy una tabla</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>
+            El elemento p (párrafo) es el apropiado para distribuir el texto en
+            párrafos. Sus etiquetas son: &lt p &gt y &lt /p &gt
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            El elemento HTML fila de tabla (table row) &lt tr &gt define una
+            fila de celdas en una tabla
+          </td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>
+            El elemento HTML Celda de tabla (&lt/tr&gt) define la celda de una
+            tabla que contiene datos
+          </td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>
+            El elemento HTML &lt th &gt define una celda como encabezado de un
+            grupo de celdas en una tabla
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h2>Formulario</h2>
+      <p>¿Quieres seguir informado?</p>
+      <fieldset>
+        <legend>Datos personales</legend>
+        <form action="" method="">
+          <label for="name">Ingresa tu nombre</label>
+          <input type="text" name="name" id="name" required />
+          <label for="apellido">Ingresa tu apellido</label>
+          <input type="text" name="apellido" id="apellido" required />
+          <label for="edad">Ingresa tu edad</label>
+          <input type="text" name="edad" id="edad" required />
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend>Otros datos</legend>
+        <form action="">
+          <label for="like">¿Te estan gustando los cursos?</label>
+          <label for="si">Si</label>
+          <input type="radio" name="si" id="si" />
+          <label for="no">No</label>
+          <input type="radio" name="no" id="no" />
+          <label for="unidad">Selecciona tu unidad preferida</label>
+          <select name="unidad" id="unidad">
+            <option value="1">HTML</option>
+            <option value="2">JAVA</option>
+            <option value="3">JavaScript</option>
+            <option value="4">Spring Boot</option>
+          </select>
+          <hr />
+          <label for="comentarios">¿Tienes algún comentario?</label>
+          <br />
+          <textarea
+            name="comentarios"
+            id="comentarios"
+            cols="100"
+            rows="10"
+          ></textarea>
+          <button type="submit">submit</button>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

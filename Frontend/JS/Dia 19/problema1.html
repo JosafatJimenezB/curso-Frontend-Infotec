@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Persona {
+        constructor(nombre, edad) {
+          this.nombre = nombre;
+          this.edad = edad;
+        }
+
+        imprimir() {
+          document.write(`Nombre: ${this.nombre} Edad: ${this.edad}`);
+        }
+      }
+
+      class Empleado extends Persona {
+        constructor(nombre, edad, sueldo) {
+          super(nombre, edad);
+          this.sueldo = sueldo;
+        }
+
+        imprimir() {
+          document.write(`Sueldo: ${this.sueldo}`);
+        }
+
+        pagaImpuestos() {
+          if (this.sueldo > 5000) {
+            document.write(`${this.nombre} debe pagar impuestos`);
+          } else {
+            document.write(`${this.nombre} no debe pagar impuestos`);
+          }
+        }
+      }
+
+      const persona1 = new Persona("Juan", 25);
+      persona1.imprimir();
+      document.write("<br>");
+
+      const empleado1 = new Empleado("Pedro", 44, 7000);
+      empleado1.imprimir();
+      empleado1.pagaImpuestos();
+      document.write("<br>");
+    </script>
+  </body>
+</html>

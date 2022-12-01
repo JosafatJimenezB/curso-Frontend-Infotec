@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio matematicas</title>
+  </head>
+  <body>
+    <script>
+      class Matematica {
+        static mayor(v1, v2) {
+          if (v1 > v2) {
+            return v1;
+          } else {
+            return v2;
+          }
+        }
+
+        static menor(v1, v2) {
+          if (v1 < v2) {
+            return v1;
+          } else {
+            return v2;
+          }
+        }
+
+        static aleatorio(inicio, fin) {
+          return Math.trunc(Math.random() * (fin + 1 - inicio) + inicio);
+        }
+      }
+
+      let x1 = Matematica.aleatorio(1, 10);
+      let x2 = Matematica.aleatorio(1, 10);
+
+      document.write(
+        `El mayor de ${x1} y ${x2} es ${Matematica.mayor(x1, x2)} <br>`
+      );
+      document.write(
+        `El menor de ${x1} y ${x2} es ${Matematica.menor(x1, x2)} <br>`
+      );
+    </script>
+  </body>
+</html>

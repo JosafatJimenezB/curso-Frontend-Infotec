@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio fecha</title>
+  </head>
+  <body>
+    <script>
+      class fecha {
+        static retornarMes(mes) {
+          switch (mes) {
+            case 1:
+              return "Enero";
+
+            case 2:
+              return "Febrero";
+
+            case 3:
+              return "Marzo";
+
+            case 4:
+              return "Abril";
+
+            case 5:
+              return "Mayo";
+
+            case 6:
+              return "Junio";
+
+            case 7:
+              return "Julio";
+
+            case 8:
+              return "Agosto";
+
+            case 9:
+              return "Septiembre";
+
+            case 10:
+              return "Octubre";
+
+            case 11:
+              return "Noviembre";
+
+            case 12:
+              return "Diciembre";
+          }
+        }
+
+        static fechaCompleta() {
+          const fecha = new Date();
+          return `${fecha.getDate()} de ${
+            fecha.getMonth() + 1
+          } de ${fecha.getFullYear()}`;
+        }
+      }
+
+      document.write(`La fecha actual es ${fecha.fechaCompleta()} <br>`);
+      document.write(fecha.retornarMes(12));
+    </script>
+  </body>
+</html>

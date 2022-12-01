@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio persona</title>
+  </head>
+  <body>
+    <script>
+      class Persona {
+        constructor(nom, ed) {
+          this._nombre = nom;
+          this._edad = ed;
+        }
+
+        get nombre() {
+          return this._nombre;
+        }
+
+        set nombre(nom) {
+          this._nombre = nom;
+        }
+
+        get edad() {
+          return this._edad;
+        }
+
+        set edad(ed) {
+          if (ed >= 0) {
+            this._edad = ed;
+          } else {
+            throw "La edad no puede ser negativa";
+          }
+        }
+
+        imprimir() {
+          document.write(`Npmbre: ${this._nombre} Edad: ${this._edad} <br>`);
+        }
+      }
+
+      const persona1 = new Persona();
+
+      persona1.nombre = "Juan";
+      persona1.edad = 20;
+      persona1.imprimir();
+    </script>
+  </body>
+</html>

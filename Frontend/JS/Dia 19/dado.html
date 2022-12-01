@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio dado</title>
+  </head>
+  <body>
+    <script>
+      class Dado {
+        constructor() {
+          this._valor = 1;
+        }
+
+        get valor() {
+          return this._valor;
+        }
+
+        set valor(v) {
+          if (v >= 1 && v <= 6 && v % 1 === 0) {
+            this._valor = v;
+          } else {
+            throw "Error en asignacion del valor del dado";
+          }
+        }
+
+        imprimir() {
+          console.log(this._valor + "<br>");
+        }
+      }
+
+      const dado1 = new Dado();
+      dado1.imprimir();
+      dado1.valor = 6;
+      dado1.imprimir();
+    </script>
+  </body>
+</html>

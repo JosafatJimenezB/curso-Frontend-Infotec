@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array meses del año</title>
+  </head>
+  <body>
+    <script>
+      function mostrarFecha(meses, dias) {
+        let num = parseInt(prompt("Ingrese el numero de mes: "));
+        document.write(
+          "Corresponde al mes: " +
+            meses[num - 1] +
+            " y tiene " +
+            dias[num - 1] +
+            " dias"
+        );
+      }
+
+      let meses;
+      meses = new Array(
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      );
+
+      let dias;
+      dias = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+      mostrarFecha(meses, dias);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo persona array</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      let persona = ["Diego Martinez", 50, 78.5];
+      document.write(
+        persona[0] +
+          " tiene " +
+          persona[1] +
+          " años y pesa " +
+          persona[2] +
+          " kg"
+      );
+
+      // 2
+      let ingresos = [];
+      ingresos[3] = 1000;
+      ingresos[5] = 5000;
+
+      for (let i = 0; i < 6; i++) {
+        if (ingresos[i] != undefined) {
+          document.write("<br>El ingreso " + i + " es " + ingresos[i] + "<br>");
+        }
+      }
+
+      // 3
+
+      let matrizIdentidad = [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1],
+      ];
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          document.write(matrizIdentidad[i][j] + " ");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

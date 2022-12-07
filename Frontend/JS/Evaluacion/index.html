@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluacion</title>
+  </head>
+  <body>
+    <h1>Administración de Artículos</h1>
+    <table border="1">
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Seleccionar</th>
+      </tr>
+    </table>
+
+    <br />
+
+    <form action="" id="form">
+      <label for="codigo">Código</label>
+      <input type="number" name="codigo" id="codigo" min="0" />
+      <br />
+      <label for="descripcion">Descripción</label>
+      <input type="text" name="descripcion" id="descripcion" />
+      <br />
+      <label for="precio">Precio</label>
+      <input type="number" name="precio" id="precio" min="0" />
+      <br />
+      <button id="btnAgregar">Agregar</button>
+      <button id="btnModificar">Modificar</button>
+      <button id="btnEliminar">Eliminar</button>
+    </form>
+
+    <script>
+      const btnAgregar = document.getElementById("btnAgregar");
+      const btnModificar = document.getElementById("btnModificar");
+      const btnDelete = document.getElementById("btnEliminar");
+      const table = document.querySelector("table");
+
+      const codigoInput = document.getElementById("codigo");
+      const descripcionInput = document.getElementById("descripcion");
+      const precioInput = document.getElementById("precio");
+
+      let arreglo = [];
+
+      arreglo.push({ codigo: 1, descripcion: "papas", precio: 12.1 });
+
+      function agregar() {
+        let codigo = document.getElementById("codigo").value;
+        let descripcion = document.getElementById("descripcion").value;
+        let precio = document.getElementById("precio").value;
+
+        console.log(arreglo);
+        let articulo = {
+          codigo: codigo,
+          descripcion: descripcion,
+          precio: precio,
+        };
+
+        if (codigo == null || descripcion == "" || precio == null) {
+          alert("Debe llenar todos los campos");
+          return;
+        }
+
+        if (arreglo.length == 0) {
+          arreglo.push(articulo);
+        } else {
+          let existe = false;
+          for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i].codigo == codigo) {
+              existe = true;
+              break;
+            }
+          }
+          if (existe) {
+            alert("El código ya existe");
+          } else {
+            arreglo.push(articulo);
+          }
+        }
+      }
+
+      function eliminarRegistro() {
+        let id = parseInt(prompt("Ingrese el código del registro a eliminar"));
+
+        for (let i = 0; i < arreglo.length; i++) {
+          if (arreglo[i].codigo == id) {
+            arreglo.pop(i, 1);
+            break;
+          }
+        }
+      }
+
+      function modificarElemento(codigoNuevo, descripcionNueva, precioNuevo) {
+        let id = parseInt(prompt("Ingrese el código del registro a modificar"));
+
+        for (let i = 0; i < arreglo.length; i++) {
+          if (arreglo[i].codigo == id) {
+            let codigo = document.getElementById("codigo").value;
+            let descripcion = document.getElementById("descripcion").value;
+            let precio = document.getElementById("precio").value;
+
+            let articulo = {
+              codigo: codigoNuevo,
+              descripcion: descripcionNueva,
+              precio: precioNuevo,
+            };
+
+            arreglo[i] = articulo;
+            break;
+          }
+        }
+      }
+
+      function showData() {
+        let data = "";
+        for (let i = 0; i < arreglo.length; i++) {
+          data += `
+            <tr>
+              <td>${arreglo[i].codigo}</td>
+              <td>${arreglo[i].descripcion}</td>
+              <td>${arreglo[i].precio}</td>
+              <td><button id="btnSelect">Seleccionar</button></td>
+            </tr>
+          `;
+        }
+        table.innerHTML += data;
+      }
+
+      console.log(arreglo);
+      showData();
+
+      btnAgregar.addEventListener("click", (e) => {
+        e.preventDefault();
+        agregar();
+        showData();
+      });
+
+      btnDelete.addEventListener("click", (e) => {
+        e.preventDefault();
+        eliminarRegistro();
+        showData();
+      });
+
+      btnModificar.addEventListener("click", (e) => {
+        e.preventDefault();
+        modificarElemento();
+
+        codigoInput.value = "";
+        descripcionInput.value = "";
+        precioInput.value = "";
+
+        showData();
+      });
+    </script>
+  </body>
+</html>

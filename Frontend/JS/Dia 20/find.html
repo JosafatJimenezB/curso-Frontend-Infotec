@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find</title>
+  </head>
+  <body>
+    <script>
+      const personas = [
+        {
+          nombre: "pedro",
+          edad: 34,
+        },
+        {
+          nombre: "ana",
+          edad: 54,
+        },
+        {
+          nombre: "carlos",
+          edad: 12,
+        },
+        {
+          nombre: "maria",
+          edad: 22,
+        },
+        {
+          nombre: "oscar",
+          edad: 72,
+        },
+      ];
+
+      let per = personas.find((persona, indice) => persona.nombre == "maria");
+      if (per != undefined) console.log(per);
+      else console.log("No se encuentra maria en el vector de objetos");
+
+      let indice = personas.findIndex(
+        (persona, indice) => persona.nombre == "maria"
+      );
+      if (indice != -1)
+        console.log("Se encuentra en la posicion " + indice + " del arreglo");
+      else console.log("No se encuentra a maria en el vector de objetos");
+    </script>
+  </body>
+</html>

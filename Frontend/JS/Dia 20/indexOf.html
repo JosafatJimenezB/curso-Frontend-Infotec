@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndexOf</title>
+  </head>
+  <body>
+    <script>
+      let arreglo1 = [10, 20, 30, 40, 50, 60, 10, 20, 30];
+
+      // Indice donde se almacena el valor 30
+      console.log(arreglo1.indexOf(30));
+
+      // Indice donde se almacena un valor inexistente
+      console.log(arreglo1.indexOf(100));
+
+      // Indice donde se almacena el valor 20
+      // buscando desde el finañ
+      console.log(arreglo1.lastIndexOf(20));
+
+      // Indice donde se almacena el valor 10
+      // comenzando la busqueda en la posicion 5
+      console.log(arreglo1.indexOf(10, 5));
+
+      // Existe el valor 50 en el arreglo?
+      console.log(arreglo1.includes(50));
+
+      // Existe el valor 100 en el arreglo?
+      console.log(arreglo1.includes(100));
+    </script>
+  </body>
+</html>

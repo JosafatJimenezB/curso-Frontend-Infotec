@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let carton = [];
+      let cant = 0;
+
+      do {
+        let premio = parseInt(Math.random() * 1000);
+        carton[premio] = 1000 * (cant + 1);
+        cant++;
+      } while (cant != 11);
+
+      for (let i = 0; i < carton.length; i++) {
+        if (carton[i] != undefined) {
+          document.write(
+            "Carton " + i + " tiene un premio de " + carton[i] + "<br>"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

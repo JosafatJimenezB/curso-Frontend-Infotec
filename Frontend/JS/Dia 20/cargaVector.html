@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let vec = [];
+      let valor;
+      let indice = 0;
+
+      do {
+        valor = prompt("Ingrese un valor");
+        valor = parseInt(valor);
+        if (valor != null) {
+          vec[indice] = valor;
+          indice++;
+        }
+      } while (valor != 0);
+
+      let suma = 0;
+      for (let i = 0; i < vec.length; i++) {
+        suma += vec[i];
+      }
+
+      document.write("Se ingresaron " + vec.length + " valores<br>");
+      document.write("La suma de los valores es: " + suma);
+    </script>
+  </body>
+</html>

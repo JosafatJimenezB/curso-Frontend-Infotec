@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio deposito</title>
+  </head>
+  <body>
+    <script>
+      let depositos = [];
+      let nro, monto;
+
+      do {
+        nro = prompt("Ingrese el numero de cuenta");
+        nro = parseInt(nro);
+        if (nro != 0) {
+          monto = prompt("Ingrese el monto a depositar");
+          monto = parseInt(monto);
+          depositos[nro] = monto;
+        }
+      } while (nro != 0);
+
+      let suma = 0;
+      let canti = 0;
+
+      for (let i = 0; i < depositos.length; i++) {
+        if (depositos[i] != undefined) {
+          suma += depositos[i];
+          canti++;
+        }
+      }
+
+      document.write("Cantidad de depositos " + canti + "<br>");
+      document.write("Total depositado por todos los clientes " + suma);
+    </script>
+  </body>
+</html>

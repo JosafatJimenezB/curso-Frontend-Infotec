@@ -8,31 +8,29 @@
   </head>
   <body>
     <script>
-      let arrayDias = [
-        "Lunes",
-        "Martes",
-        "Miercoles",
-        "Jueves",
-        "Viernes",
-        "Sabado",
-        "Domingo",
-      ];
+      let contadorDias = 0;
 
-      const fecha = new Date();
+      let diaSemana;
 
-      let dia = fecha.getDay();
+      let esLaboral;
 
-      function diasLaborales(dia) {
-        if (dia == 0 || dia == 6) {
-          return false;
+      do {
+        diaSemana = prompt(
+          "Ingresa un día de la semana (lunes, martes, miércoles, jueves, viernes, sábado, domingo)"
+        );
+
+        if (diaSemana === "sábado" || diaSemana === "domingo") {
+          esLaboral = false;
         } else {
-          return true;
+          esLaboral = true;
         }
-      }
 
-      let diasLaborales = arrayDias.filter(function (dia) {
-        return dia != "Sabado" && dia != "Domingo";
-      });
+        if (esLaboral) {
+          contadorDias++;
+        }
+      } while (diaSemana !== "domingo");
+
+      alert(`Ingresaste ${contadorDias} días laborales`);
     </script>
   </body>
 </html>

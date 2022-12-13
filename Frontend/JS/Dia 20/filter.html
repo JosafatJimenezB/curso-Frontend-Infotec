@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter</title>
+  </head>
+  <body>
+    <script>
+      const personas = [
+        {
+          nombre: "Alejandro",
+          edad: 34,
+        },
+        {
+          nombre: "Sofia",
+          edad: 54,
+        },
+        {
+          nombre: "Jose",
+          edad: 12,
+        },
+        {
+          nombre: "Lizeth",
+          edad: 22,
+        },
+        {
+          nombre: "Claudio",
+          edad: 72,
+        },
+      ];
+
+      // Recuperar todas las personas mayores de edad
+      const mayoresDeEdad = personas.filter(
+        (elemento, indice, arreglo) => elemento.edad >= 18
+      );
+      console.log(mayoresDeEdad);
+    </script>
+  </body>
+</html>

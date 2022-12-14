@@ -1,0 +1,30 @@
+/* .aviso{
+    padding: 0.5em;
+    border: 1px solid #98be10;
+    background: #f6feda;
+}
+
+.error{
+    color: #930;
+    font-weight: bold;
+}
+
+p.destacado{
+    color: red;
+} */
+
+
+.destacado{
+    font-size: 15px;
+}
+
+.especial{
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+}
+
+
+

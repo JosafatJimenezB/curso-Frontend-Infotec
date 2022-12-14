@@ -1,0 +1,35 @@
+.vacio{
+    list-style: none;
+}
+
+.ciculorelleno{
+    list-style: disc;
+}
+
+.decimal{
+    list-style: decimal;
+}
+
+.romanominuscula{
+    list-style: lower-roman;
+}
+
+.romanomayuscula{
+    list-style: upper-roman;
+}
+
+.circulovacio{
+    list-style: circle;
+}
+
+.cuadrado{
+    list-style: square;
+}
+
+.letrasminusculas{
+    list-style: lower-alpha;
+}
+
+.letrasmayusculas{
+    list-style: upper-alpha;
+}
